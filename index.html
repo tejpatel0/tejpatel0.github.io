@@ -1,0 +1,222 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Tej Patel</title>
+<meta name="description" content="Tej Patel, Staff Software Engineer at Mailchimp. Platform engineering, CI/CD, and AI agents for developer productivity.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%232f6f5e'/%3E%3Ctext x='50%25' y='54%25' dominant-baseline='middle' text-anchor='middle' font-family='Helvetica,Arial,sans-serif' font-size='30' font-weight='700' fill='white'%3ETP%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Source+Serif+4:opsz,wght@8..60,600&display=swap" rel="stylesheet">
+<style>
+:root {
+  --bg: #fbfaf7;
+  --surface: #ffffff;
+  --text: #1d1f1e;
+  --muted: #5d6360;
+  --line: #e4e2dc;
+  --accent: #2f6f5e;
+  --accent-soft: #e6f0ec;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #131615;
+    --surface: #1a1e1c;
+    --text: #e8ebe9;
+    --muted: #a0a8a4;
+    --line: #2b302e;
+    --accent: #7cc4ad;
+    --accent-soft: #1f2d28;
+  }
+}
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font: 16px/1.65 Inter, system-ui, -apple-system, "Segoe UI", sans-serif;
+}
+a { color: var(--accent); text-decoration: none; }
+a:hover { text-decoration: underline; }
+.wrap { max-width: 760px; margin: 0 auto; padding: 0 20px; }
+
+header { padding: 88px 0 40px; }
+h1 {
+  font-family: "Source Serif 4", Georgia, serif;
+  font-size: clamp(2.4rem, 6vw, 3.2rem);
+  line-height: 1.1;
+  margin: 0 0 12px;
+  letter-spacing: -0.01em;
+}
+.role { font-size: 1.15rem; color: var(--muted); margin: 0 0 24px; }
+.links { display: flex; flex-wrap: wrap; gap: 10px; margin: 0; padding: 0; list-style: none; }
+.links a {
+  display: inline-block;
+  padding: 7px 14px;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  color: var(--text);
+  font-size: 0.92rem;
+  font-weight: 500;
+  background: var(--surface);
+}
+.links a:hover { border-color: var(--accent); color: var(--accent); text-decoration: none; }
+.links a.primary { background: var(--accent); border-color: var(--accent); color: var(--bg); }
+.links a.primary:hover { color: var(--bg); opacity: 0.9; }
+
+section { padding: 36px 0; border-top: 1px solid var(--line); }
+h2 {
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin: 0 0 20px;
+}
+p { margin: 0 0 14px; }
+
+.job { margin-bottom: 30px; }
+.job:last-child { margin-bottom: 0; }
+.job-head { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 2px 16px; align-items: baseline; }
+.job h3 { font-size: 1.05rem; font-weight: 600; margin: 0; }
+.when { color: var(--muted); font-size: 0.9rem; white-space: nowrap; }
+.org { color: var(--muted); font-size: 0.95rem; margin: 2px 0 10px; }
+ul.points { margin: 0; padding-left: 20px; }
+ul.points li { margin-bottom: 6px; }
+ul.points li::marker { color: var(--accent); }
+
+.stats { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin: 4px 0 0; }
+.stat { background: var(--surface); border: 1px solid var(--line); border-radius: 10px; padding: 14px 16px; }
+.stat b { display: block; font-size: 1.35rem; font-weight: 700; color: var(--accent); line-height: 1.2; }
+.stat span { font-size: 0.86rem; color: var(--muted); }
+
+.tags { display: flex; flex-wrap: wrap; gap: 8px; margin: 0 0 18px; padding: 0; list-style: none; }
+.tags li { background: var(--accent-soft); color: var(--text); border-radius: 6px; padding: 4px 10px; font-size: 0.88rem; }
+.skill-group { font-size: 0.82rem; font-weight: 600; color: var(--muted); margin: 0 0 8px; }
+
+footer { padding: 32px 0 56px; border-top: 1px solid var(--line); color: var(--muted); font-size: 0.88rem; }
+
+@media (max-width: 560px) {
+  header { padding: 56px 0 28px; }
+  .stats { grid-template-columns: 1fr; }
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header>
+  <h1>Tej Patel</h1>
+  <p class="role">Staff Software Engineer at Mailchimp. Platform engineering, CI/CD, and AI agents for developer productivity.</p>
+  <ul class="links">
+    <li><a class="primary" href="Tej_Patel_Resume.pdf">Resume (PDF)</a></li>
+    <li><a href="https://www.linkedin.com/in/tejpatel-engineer">LinkedIn</a></li>
+    <li><a href="https://github.com/tejpatel0">GitHub</a></li>
+    <li><a href="mailto:tejpatel98@gmail.com">tejpatel98@gmail.com</a></li>
+  </ul>
+</header>
+
+<section id="about">
+  <h2>About</h2>
+  <p>Platform engineer on Mailchimp's Developer Experience team, working on the build, deploy, and runtime systems behind the core application that 500+ engineers ship to every day.</p>
+  <p>Lately that means AI agents: Claude Code skills that help debug pipeline failures, speed up CI, and roll out tests across teams. Before that, deploy migrations, runtime upgrades, and CI performance.</p>
+  <p>The work I enjoy most is the kind nobody notices when it goes well: builds get faster, deploys stay boring, and engineers spend their time on their own code instead of the pipeline.</p>
+  <div class="stats">
+    <div class="stat"><b>500+</b><span>engineers on the platform</span></div>
+    <div class="stat"><b>15-20</b><span>production deploys a day</span></div>
+    <div class="stat"><b>24 to 6 min</b><span>unit-test time per pull request</span></div>
+  </div>
+</section>
+
+<section id="experience">
+  <h2>Experience</h2>
+
+  <div class="job">
+    <div class="job-head"><h3>Staff Software Engineer</h3><span class="when">Aug 2026 - Present</span></div>
+    <p class="org">Mailchimp (Intuit), Developer Experience</p>
+    <ul class="points">
+      <li>Drive the team's adoption of AI agents. Write Claude Code skills that engineering teams use to debug pipeline failures, tune CI, and roll out tests.</li>
+      <li>Scaled an LLM triage agent from deploy failures to quality-gate, backend CI, and canary-gate failures. It posted 135 verdicts in its first five months, a median of about 8 minutes after each failure.</li>
+      <li>Built a CI build-time skill that ships pipeline changes proven with paired A/B builds. Median PR build time dropped 26-32% on four other teams' services.</li>
+      <li>Maintain the PHP patching practice that keeps the core application on current security releases.</li>
+    </ul>
+  </div>
+
+  <div class="job">
+    <div class="job-head"><h3>Senior Software Engineer</h3><span class="when">Aug 2023 - Jul 2026</span></div>
+    <p class="org">Mailchimp (Intuit), Developer Experience</p>
+    <ul class="points">
+      <li>Co-built an LLM triage agent (Claude, GitHub Actions) that finds the root cause of CI/CD failures and posts it to on-call.</li>
+      <li>Built a Claude Code skill that opens CI and test changes as pull requests in other teams' repositories: 26 repositories across 15 engineering orgs.</li>
+      <li>Led the move of production deploys from on-prem data centers to a cloud CI/CD platform, cut over in phases with zero disruption.</li>
+      <li>Started and led a CI performance program that cut unit-test time from 24 to 6 minutes per pull request.</li>
+      <li>Took over a runtime image pipeline that had gone years without upgrades, built custom PHP images from source, and led the PHP 7.4 to 8.3 upgrade.</li>
+      <li>Rebuilt the developer-environment image to run natively on Apple Silicon. Local dev environments got 50% faster.</li>
+    </ul>
+  </div>
+
+  <div class="job">
+    <div class="job-head"><h3>Software Engineer</h3><span class="when">Jun 2022 - Aug 2023</span></div>
+    <p class="org">Mailchimp (Intuit), Developer Experience</p>
+    <ul class="points">
+      <li>Took over the production deploy system as its owner and wrote the plan to move it to the cloud.</li>
+      <li>Rebuilt local development tooling as a Go CLI distributed through Homebrew, with Apple Silicon support.</li>
+    </ul>
+  </div>
+
+  <div class="job">
+    <div class="job-head"><h3>Systems Engineer Intern</h3><span class="when">May 2021 - Dec 2021</span></div>
+    <p class="org">Mailchimp</p>
+    <ul class="points">
+      <li>Built Go and Terraform tooling to provision cloud projects for Kubernetes-based infrastructure.</li>
+    </ul>
+  </div>
+
+  <div class="job">
+    <div class="job-head"><h3>Cloud Automation Intern</h3><span class="when">May 2020 - Aug 2020</span></div>
+    <p class="org">VMware</p>
+    <ul class="points">
+      <li>Automated the VM-template lifecycle (build, patch, test) with Packer, Docker, and GitLab CI. Delivery went from weeks to minutes.</li>
+    </ul>
+  </div>
+
+  <div class="job">
+    <div class="job-head"><h3>Software Engineering Intern</h3><span class="when">May 2019 - Aug 2019</span></div>
+    <p class="org">CommScope (ARRIS)</p>
+    <ul class="points">
+      <li>Automated firmware signing and customer-specific Jenkins firmware builds.</li>
+    </ul>
+  </div>
+</section>
+
+<section id="skills">
+  <h2>Skills</h2>
+  <p class="skill-group">Platform and release</p>
+  <ul class="tags"><li>CI/CD</li><li>Jenkins</li><li>GitHub Actions</li><li>Argo CD</li><li>Argo Rollouts</li><li>Canary delivery</li><li>Release engineering</li></ul>
+  <p class="skill-group">Infrastructure</p>
+  <ul class="tags"><li>Kubernetes</li><li>AWS</li><li>GCP</li><li>Docker</li><li>Terraform</li><li>Container images</li></ul>
+  <p class="skill-group">AI engineering</p>
+  <ul class="tags"><li>LLM agents</li><li>Claude Code skills</li><li>Agent evaluation</li></ul>
+  <p class="skill-group">Languages</p>
+  <ul class="tags"><li>Go</li><li>PHP</li><li>Python</li><li>Groovy</li><li>Bash</li></ul>
+</section>
+
+<section id="education">
+  <h2>Education</h2>
+  <div class="job">
+    <div class="job-head"><h3>M.S. Electrical and Computer Engineering</h3><span class="when">2022</span></div>
+    <p class="org">Georgia Institute of Technology, GPA 4.0</p>
+  </div>
+  <div class="job">
+    <div class="job-head"><h3>B.S. Computer Engineering</h3><span class="when">2021</span></div>
+    <p class="org">Georgia Institute of Technology, GPA 3.94</p>
+  </div>
+</section>
+
+<footer>Atlanta, GA</footer>
+
+</div>
+</body>
+</html>

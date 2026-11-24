@@ -423,7 +423,7 @@ footer .wrap { display: flex; justify-content: space-between; flex-wrap: wrap; g
         <p class="org">Mailchimp (Intuit), Developer Experience</p>
         <ul class="points">
           <li>Co-built the LLM triage agent and the cross-team coverage skill.</li>
-          <li>Started and led the CI performance program, and moved builds to dedicated nodes.</li>
+          <li>Started and led the CI performance program, and led the migration of builds from on-prem servers to cloud Jenkins.</li>
           <li>Built custom PHP runtime images and led the PHP 7.4 to 8.3 upgrade. Rebuilt the dev-environment image for Apple Silicon, which made local environments 50% faster.</li>
         </ul>
       </li>
@@ -571,6 +571,7 @@ footer .wrap { display: flex; justify-content: space-between; flex-wrap: wrap; g
     ]},
     build: { t: 'Build', s: 'Turning a commit into a runnable image.', items: [
       ['14 to 9 min', 'Benchmarked four build-node types and moved builds to dedicated nodes. The 30-minute spikes stopped.'],
+      ['Cloud builds', 'Led the migration of the core application\'s builds from on-prem servers to cloud Jenkins, with zero disruption to 500+ engineers.'],
       ['From source', 'Built the company\'s first custom PHP runtime images, compiled from source for dev, CI, and production.']
     ]},
     test: { t: 'Test', s: 'Making CI fast and trustworthy.', items: [

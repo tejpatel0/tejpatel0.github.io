@@ -114,9 +114,9 @@ h2 { font-size: clamp(1.9rem, 4.4vw, 2.8rem); font-weight: 800; letter-spacing: 
 p { margin: 0 0 16px; }
 
 /* pipeline */
-.pipe { position: relative; display: grid; grid-template-columns: repeat(5, 1fr); gap: 12px; margin-bottom: 14px; }
-.pipe::before { content: ""; position: absolute; left: 10%; right: 10%; top: 31px; height: 2px; background: var(--line); z-index: 0; }
-.pipe .flow { position: absolute; left: 10%; top: 31px; height: 2px; width: 0; background: var(--accent); z-index: 0; transition: width .5s cubic-bezier(.2,.8,.2,1); }
+.pipe { position: relative; display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; margin-bottom: 14px; }
+.pipe::before { content: ""; position: absolute; left: 12.5%; right: 12.5%; top: 31px; height: 2px; background: var(--line); z-index: 0; }
+.pipe .flow { position: absolute; left: 12.5%; top: 31px; height: 2px; width: 0; background: var(--accent); z-index: 0; transition: width .5s cubic-bezier(.2,.8,.2,1); }
 .stage { position: relative; z-index: 1; background: none; border: 0; padding: 0; cursor: pointer; display: flex; flex-direction: column; align-items: center; gap: 12px; text-align: center; }
 .stage .node { width: 64px; height: 64px; border-radius: 18px; background: var(--card); border: 1.5px solid var(--line); display: grid; place-items: center; box-shadow: var(--shadow); transition: transform .25s, border-color .25s, background .25s, color .25s; color: var(--muted); }
 .stage .node svg { width: 26px; height: 26px; }
@@ -214,7 +214,7 @@ footer .wrap { display: flex; justify-content: space-between; flex-wrap: wrap; g
   section { padding: 72px 0; }
   .stats { grid-template-columns: 1fr; }
   .stat, .stat + .stat { padding: 18px 0; border-left: 0; border-bottom: 1px solid var(--ink-line); }
-  .pipe { grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 4px; }
+  .pipe { grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 4px; }
   .pipe::before, .pipe .flow { top: 23px; }
   .stage .node { width: 48px; height: 48px; border-radius: 14px; }
   .stage .node svg { width: 20px; height: 20px; }
@@ -256,7 +256,7 @@ footer .wrap { display: flex; justify-content: space-between; flex-wrap: wrap; g
   <div class="wrap">
     <p class="eyebrow"><span class="pulse" aria-hidden="true"></span>Staff Software Engineer at Mailchimp</p>
     <h1>Tej Patel<span class="dot">.</span></h1>
-    <p class="tagline">I build the platform that ships Mailchimp: <b>CI/CD, deploys, runtime images,</b> and <b>AI agents</b> that make developers faster.</p>
+    <p class="tagline">I work on Mailchimp's developer inner loop: <b>local dev, CI, builds, and runtime images,</b> plus <b>AI agents</b> that make engineers faster.</p>
     <ul class="cta">
       <li><a class="primary" href="Tej_Patel_Resume.pdf">Resume (PDF)</a></li>
       <li><a href="https://www.linkedin.com/in/tejpatel-engineer">LinkedIn</a></li>
@@ -265,7 +265,7 @@ footer .wrap { display: flex; justify-content: space-between; flex-wrap: wrap; g
     </ul>
     <div class="stats">
       <div class="stat"><b><span data-count="500">500</span>+</b><span>engineers ship on the platform</span></div>
-      <div class="stat"><b><span data-count="15">15</span>-20</b><span>production deploys a day</span></div>
+      <div class="stat"><b><span data-count="200">200</span>-300</b><span>pull requests a day through CI</span></div>
       <div class="stat"><b><span data-count="6" data-from="24">6</span><small>min</small></b><span>unit tests per pull request, down from 24</span></div>
     </div>
   </div>
@@ -273,9 +273,9 @@ footer .wrap { display: flex; justify-content: space-between; flex-wrap: wrap; g
 
 <section id="pipeline">
   <div class="wrap">
-    <p class="kicker reveal">Commit to production</p>
-    <h2 class="reveal">I own the path every change takes.</h2>
-    <p class="lede reveal">Pick a stage to see what I built there. The AI layer runs across all of them.</p>
+    <p class="kicker reveal">The inner loop</p>
+    <h2 class="reveal">From laptop to green build.</h2>
+    <p class="lede reveal">Most of my work lives here, in the loop engineers repeat all day. Pick a stage to see what I built. The AI layer runs across all of them.</p>
 
     <div class="reveal">
       <div class="pipe" role="tablist" aria-label="Pipeline stages">
@@ -292,19 +292,15 @@ footer .wrap { display: flex; justify-content: space-between; flex-wrap: wrap; g
           <span class="node"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 3h6M10 3v6L4.5 18.5A2 2 0 0 0 6.2 21h11.6a2 2 0 0 0 1.7-2.5L14 9V3"/><path d="M7 15h10"/></svg></span>
           <span class="lbl">Test</span><span class="sub">CI speed</span>
         </button>
-        <button class="stage" role="tab" data-stage="deploy" aria-selected="false">
-          <span class="node"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4.5 16.5c-1.5 1.3-2 5-2 5s3.7-.5 5-2c.7-.8.7-2.1-.1-2.9a2.2 2.2 0 0 0-2.9-.1z"/><path d="m12 15-3-3a22 22 0 0 1 2-3.9A12.9 12.9 0 0 1 22 2c0 2.7-.8 7.5-6 11a22.4 22.4 0 0 1-4 2z"/></svg></span>
-          <span class="lbl">Deploy</span><span class="sub">release safety</span>
-        </button>
         <button class="stage" role="tab" data-stage="run" aria-selected="false">
           <span class="node"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></svg></span>
-          <span class="lbl">Run</span><span class="sub">runtime, CVEs</span>
+          <span class="lbl">Runtime</span><span class="sub">images, CVEs</span>
         </button>
       </div>
 
       <button class="ai-layer" role="tab" data-stage="ai" aria-selected="false">
         <span class="tag">AI layer</span>
-        <span class="txt"><b>LLM agents and Claude Code skills</b> that diagnose failures and make changes across every stage</span>
+        <span class="txt"><b>LLM agents and Claude Code skills</b> that diagnose failures and make changes across the loop</span>
       </button>
 
       <div class="panel" role="tabpanel" aria-live="polite" id="panel"></div>
@@ -363,15 +359,15 @@ footer .wrap { display: flex; justify-content: space-between; flex-wrap: wrap; g
 
       <article class="card reveal">
         <button type="button" aria-expanded="false">
-          <div class="num">0<small>disruption</small></div>
-          <h3>Moving production deploys to the cloud</h3>
-          <p class="blurb">Took the on-prem data centers out of the deploy path for 500+ engineers.</p>
+          <div class="num">50%<small>faster</small></div>
+          <h3>Native dev environments on Apple Silicon</h3>
+          <p class="blurb">Rebuilt the local developer-environment image to match the laptops engineers actually use.</p>
           <span class="more">Read more <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></span>
         </button>
         <div class="detail"><div><dl>
-          <dt>Problem</dt><dd>Production deploys ran on a legacy system in on-prem data centers, and the wider plan would have kept them in the deploy path for a long time.</dd>
-          <dt>What I did</dt><dd>Took ownership of the deploy system, wrote the migration plan, and designed an approach that moved deploys first. Ran old and new pipelines side by side, then cut production over in phases. Benchmarked four build-node types along the way.</dd>
-          <dt>Result</dt><dd>Zero disruption to 500+ engineers. Average build time fell from 14 to 9 minutes and the 30-minute spikes stopped.</dd>
+          <dt>Problem</dt><dd>Most engineers had moved to Apple Silicon laptops, but the local dev-environment image was still built for x86.</dd>
+          <dt>What I did</dt><dd>Rebuilt the developer-environment image to run natively on ARM.</dd>
+          <dt>Result</dt><dd>Local dev environments got 50% faster for the core application's engineers.</dd>
         </dl></div></div>
       </article>
 
@@ -427,7 +423,7 @@ footer .wrap { display: flex; justify-content: space-between; flex-wrap: wrap; g
         <p class="org">Mailchimp (Intuit), Developer Experience</p>
         <ul class="points">
           <li>Co-built the LLM triage agent and the cross-team coverage skill.</li>
-          <li>Led the production deploy migration and the CI performance program.</li>
+          <li>Started and led the CI performance program, and moved builds to dedicated nodes.</li>
           <li>Built custom PHP runtime images and led the PHP 7.4 to 8.3 upgrade. Rebuilt the dev-environment image for Apple Silicon, which made local environments 50% faster.</li>
         </ul>
       </li>
@@ -435,7 +431,7 @@ footer .wrap { display: flex; justify-content: space-between; flex-wrap: wrap; g
         <div class="tl-head"><h3>Software Engineer</h3><span class="when">Jun 2022 - Aug 2023</span></div>
         <p class="org">Mailchimp (Intuit), Developer Experience</p>
         <ul class="points">
-          <li>Took over the production deploy system as its owner. Rebuilt local development tooling as a Go CLI distributed through Homebrew.</li>
+          <li>Rebuilt local development tooling from bash scripts into a Go CLI distributed through Homebrew, with Apple Silicon support and Kubernetes-based environments.</li>
         </ul>
       </li>
       <li class="tl reveal">
@@ -461,8 +457,8 @@ footer .wrap { display: flex; justify-content: space-between; flex-wrap: wrap; g
       <p class="kicker reveal">Skills</p>
       <h2 class="reveal">Toolbox.</h2>
       <div class="reveal">
-        <p class="skill-group">Platform and release</p>
-        <ul class="tags"><li>CI/CD</li><li>Jenkins</li><li>GitHub Actions</li><li>Argo CD</li><li>Argo Rollouts</li><li>Canary delivery</li><li>Release engineering</li></ul>
+        <p class="skill-group">Developer platform</p>
+        <ul class="tags"><li>CI/CD</li><li>Jenkins</li><li>GitHub Actions</li><li>Build performance</li><li>Test parallelization</li><li>Developer environments</li><li>Developer productivity</li></ul>
         <p class="skill-group">Infrastructure</p>
         <ul class="tags"><li>Kubernetes</li><li>AWS</li><li>GCP</li><li>Docker</li><li>Terraform</li><li>Container images</li></ul>
         <p class="skill-group">AI engineering</p>
@@ -582,28 +578,24 @@ footer .wrap { display: flex; justify-content: space-between; flex-wrap: wrap; g
       ['26-32%', 'Built a CI build-time skill that cut median PR build time on four other teams\' services, proven with paired A/B builds.'],
       ['36 to 45', 'Rolled out coverage reporting to 45 of 48 critical services with a cross-team Claude Code skill.']
     ]},
-    deploy: { t: 'Deploy', s: '15-20 production deploys a day, safely.', items: [
-      ['0 disruption', 'Led the move of production deploys from on-prem data centers to a cloud CI/CD platform, cut over in phases.'],
-      ['Guarded', 'Added a deploy guard that ended the failure class behind two login outages.']
-    ]},
-    run: { t: 'Run', s: 'Keeping production current and secure.', items: [
+    run: { t: 'Runtime', s: 'The PHP images every environment runs on, kept current and secure.', items: [
       ['7.4 to 8.3', 'Led the PHP upgrade with 110+ compatibility changes behind percentage-based feature flags.'],
       ['Patched', 'Maintain the patching practice that keeps the core application on current PHP security releases, with staged alpha/stable rollouts.']
     ]},
     ai: { t: 'AI layer', s: 'Agents and skills that work across every stage.', items: [
       ['135', 'Verdicts from the LLM triage agent in its first five months, a median of about 8 minutes after each failure.'],
       ['4 types', 'Specialists for deploy, quality-gate, backend CI, and canary-gate failures on a shared reasoning framework.'],
-      ['Skills', 'Claude Code skills that engineering teams use to debug pipelines, tune CI, and roll out tests.']
+      ['Skills', 'Claude Code skills that engineering teams use to debug pipelines, tune CI, profile build pods, and roll out tests.']
     ]}
   };
-  var order = ['code', 'build', 'test', 'deploy', 'run'];
+  var order = ['code', 'build', 'test', 'run'];
   var tabs = Array.prototype.slice.call(document.querySelectorAll('[data-stage]'));
   var panel = document.getElementById('panel'), flow = document.getElementById('flow');
   function esc(s) { return s.replace(/&/g, '&amp;').replace(/</g, '&lt;'); }
   function show(key) {
     tabs.forEach(function (b) { b.setAttribute('aria-selected', b.dataset.stage === key ? 'true' : 'false'); });
     var i = order.indexOf(key);
-    flow.style.width = key === 'ai' ? '80%' : (i <= 0 ? '0%' : (i / (order.length - 1) * 80) + '%');
+    flow.style.width = key === 'ai' ? '75%' : (i <= 0 ? '0%' : (i / (order.length - 1) * 75) + '%');
     var d = DATA[key];
     panel.innerHTML = '<div class="panel-body"><h3>' + esc(d.t) + '</h3><p class="ptag">' + esc(d.s) + '</p><ul>' +
       d.items.map(function (it) { return '<li><span class="metric">' + esc(it[0]) + '</span><span>' + esc(it[1]) + '</span></li>'; }).join('') +
